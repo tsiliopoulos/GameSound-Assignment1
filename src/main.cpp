@@ -342,10 +342,8 @@ void Update(void)
 		soundEngine.FmodErrorCheck(soundEngine.result);
 	}
 	else {
-		soundEngine.result = soundEngine.sound->channel->set3DMinMaxDistance(0.0f, 20.0f);
-		soundEngine.FmodErrorCheck(soundEngine.result);
 		soundEngine.result = soundEngine.sound->channel->setMode(FMOD_3D_INVERSEROLLOFF);
-		soundEngine.FmodErrorCheck(soundEngine.result);
+		soundEngine.FmodErrorCheck(soundEngine.result);	
 	}
 
 	// set channel position
