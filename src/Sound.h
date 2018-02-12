@@ -1,4 +1,10 @@
 #pragma once
+// Author:			Brent Cowan
+// Creation Date:	January 22, 2018
+// Modified By:		Tom Tsiliopoulos 
+// Student ID:		100616336
+// Date Modified:	February 11, 2018
+
 #include "FMOD/fmod.hpp"
 #include "FMOD/fmod_errors.h"
 #include <Windows.h>

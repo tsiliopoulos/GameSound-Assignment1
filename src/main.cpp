@@ -1,8 +1,9 @@
 #pragma once
-// Author:			Micheal G
-// Creation Date:	January 22, 2018
+// CG Author:		Michael Gharbharan
+// Creation Date:	September 15, 2017
 // Modified By:		Tom Tsiliopoulos 
-// Date Modified:	January 22, 2018
+// Student ID:		100616336
+// Date Modified:	February 11, 2018
 
 #define GLEW_STATIC
 #include "glew/glew.h"
@@ -63,10 +64,9 @@ TTK::Camera camera;
 
 // Sound Objects
 SoundEngine		soundEngine;
-FMOD_RESULT     result;
+//FMOD_RESULT     result;
 
 // Sound Channel
-//FMOD::Channel   *channel = 0;
 FMOD_VECTOR soundPos = { 0.0f, 0.0f, 0.0f };
 FMOD_VECTOR soundVel = { 0.0f, 0.0f, 0.0f };
 
@@ -118,19 +118,19 @@ void OpenSoundFile()
 			soundEngine.sound->cleanUp();
 		}
 
-		result = soundEngine.system->createSound(outPath, FMOD_3D, 0, &soundEngine.sound->file);
-		soundEngine.FmodErrorCheck(result);
-		result = soundEngine.sound->file->set3DMinMaxDistance(0.0f, 6.0f);
-		soundEngine.FmodErrorCheck(result);
-		result = soundEngine.sound->file->setMode(FMOD_LOOP_NORMAL);
-		soundEngine.FmodErrorCheck(result);
+		soundEngine.result = soundEngine.system->createSound(outPath, FMOD_3D, 0, &soundEngine.sound->file);
+		soundEngine.FmodErrorCheck(soundEngine.result);
+		soundEngine.result = soundEngine.sound->file->set3DMinMaxDistance(0.0f, 6.0f);
+		soundEngine.FmodErrorCheck(soundEngine.result);
+		soundEngine.result = soundEngine.sound->file->setMode(FMOD_LOOP_NORMAL);
+		soundEngine.FmodErrorCheck(soundEngine.result);
 
-		result = soundEngine.system->playSound(soundEngine.sound->file, 0, true, &soundEngine.sound->channel);
-		soundEngine.FmodErrorCheck(result);
-		result = soundEngine.sound->channel->set3DAttributes(&soundPos, &soundVel);
-		soundEngine.FmodErrorCheck(result);
-		result = soundEngine.sound->channel->setPaused(false);
-		soundEngine.FmodErrorCheck(result);
+		soundEngine.result = soundEngine.system->playSound(soundEngine.sound->file, 0, true, &soundEngine.sound->channel);
+		soundEngine.FmodErrorCheck(soundEngine.result);
+		soundEngine.result = soundEngine.sound->channel->set3DAttributes(&soundPos, &soundVel);
+		soundEngine.FmodErrorCheck(soundEngine.result);
+		soundEngine.result = soundEngine.sound->channel->setPaused(false);
+		soundEngine.FmodErrorCheck(soundEngine.result);
 	}
 	else if (nfdresult == NFD_CANCEL)
 	{
@@ -149,23 +149,23 @@ void SoundEngineInit() {
 	Load some sounds
 	*/
 
-	result = soundEngine.system->createSound("../media/drumloop.wav", FMOD_3D, 0, &soundEngine.sound->file);
-	soundEngine.FmodErrorCheck(result);
-	result = soundEngine.sound->file->set3DMinMaxDistance(0.5f, 300.0f);
-	soundEngine.FmodErrorCheck(result);
-	result = soundEngine.sound->file->setMode(FMOD_LOOP_NORMAL);
-	soundEngine.FmodErrorCheck(result);
+	soundEngine.result = soundEngine.system->createSound("../media/drumloop.wav", FMOD_3D, 0, &soundEngine.sound->file);
+	soundEngine.FmodErrorCheck(soundEngine.result);
+	soundEngine.result = soundEngine.sound->file->set3DMinMaxDistance(0.5f, 300.0f);
+	soundEngine.FmodErrorCheck(soundEngine.result);
+	soundEngine.result = soundEngine.sound->file->setMode(FMOD_LOOP_NORMAL);
+	soundEngine.FmodErrorCheck(soundEngine.result);
 
 	/*
 	Play sounds at ertain positions
 	*/
 
-	result = soundEngine.system->playSound(soundEngine.sound->file, 0, true, &soundEngine.sound->channel);
-	soundEngine.FmodErrorCheck(result);
-	result = soundEngine.sound->channel->set3DAttributes(&soundPos, &soundVel);
-	soundEngine.FmodErrorCheck(result);
-	result = soundEngine.sound->channel->setPaused(false);
-	soundEngine.FmodErrorCheck(result);
+	soundEngine.result = soundEngine.system->playSound(soundEngine.sound->file, 0, true, &soundEngine.sound->channel);
+	soundEngine.FmodErrorCheck(soundEngine.result);
+	soundEngine.result = soundEngine.sound->channel->set3DAttributes(&soundPos, &soundVel);
+	soundEngine.FmodErrorCheck(soundEngine.result);
+	soundEngine.result = soundEngine.sound->channel->setPaused(false);
+	soundEngine.FmodErrorCheck(soundEngine.result);
 
 }
 
@@ -336,16 +336,16 @@ void Update(void)
 	}
 
 	if (rollOff) {
-		result = soundEngine.sound->channel->set3DMinMaxDistance(2.0f, 6.0f);
-		soundEngine.FmodErrorCheck(result);
-		result = soundEngine.sound->channel->setMode(FMOD_3D_LINEARROLLOFF);
-		soundEngine.FmodErrorCheck(result);
+		soundEngine.result = soundEngine.sound->channel->set3DMinMaxDistance(2.0f, 6.0f);
+		soundEngine.FmodErrorCheck(soundEngine.result);
+		soundEngine.result = soundEngine.sound->channel->setMode(FMOD_3D_LINEARROLLOFF);
+		soundEngine.FmodErrorCheck(soundEngine.result);
 	}
 	else {
-		result = soundEngine.sound->channel->set3DMinMaxDistance(0.0f, 20.0f);
-		soundEngine.FmodErrorCheck(result);
-		result = soundEngine.sound->channel->setMode(FMOD_3D_INVERSEROLLOFF);
-		soundEngine.FmodErrorCheck(result);
+		soundEngine.result = soundEngine.sound->channel->set3DMinMaxDistance(0.0f, 20.0f);
+		soundEngine.FmodErrorCheck(soundEngine.result);
+		soundEngine.result = soundEngine.sound->channel->setMode(FMOD_3D_INVERSEROLLOFF);
+		soundEngine.FmodErrorCheck(soundEngine.result);
 	}
 
 	// set channel position
@@ -353,8 +353,8 @@ void Update(void)
 	soundPos.y = Speaker.getLocalPosition().y;
 	soundPos.z = Speaker.getLocalPosition().z;
 
-	result = soundEngine.sound->channel->set3DAttributes(&soundPos, &soundVel);
-	soundEngine.FmodErrorCheck(result);
+	soundEngine.result = soundEngine.sound->channel->set3DAttributes(&soundPos, &soundVel);
+	soundEngine.FmodErrorCheck(soundEngine.result);
 
 	
 	// Draw UI

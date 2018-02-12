@@ -2,7 +2,8 @@
 // Author:			Brent Cowan
 // Creation Date:	January 22, 2018
 // Modified By:		Tom Tsiliopoulos 
-// Date Modified:	January 22, 2018
+// Student ID:		100616336
+// Date Modified:	February 11, 2018
 
 //#pragma comment (lib, "../lib/fmod_vc.lib")
 #include "FMOD/fmod.hpp"
@@ -29,9 +30,11 @@ struct Listener {
 class SoundEngine {
 private:
 	bool			init;
-	FMOD_RESULT     result;
+	
 
 public:
+	FMOD_RESULT     result;
+
 	SoundEngine();
 	~SoundEngine();
 

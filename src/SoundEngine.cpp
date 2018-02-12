@@ -1,7 +1,8 @@
 // Author:			Brent Cowan
 // Creation Date:	January 22, 2018
 // Modified By:		Tom Tsiliopoulos 
-// Date Modified:	January 22, 2018
+// Student ID:		100616336
+// Date Modified:	February 11, 2018
 
 #include "SoundEngine.h"
 

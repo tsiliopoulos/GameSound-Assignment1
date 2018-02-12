@@ -1,4 +1,9 @@
 #include "Sound.h"
+// Author:			Brent Cowan
+// Creation Date:	January 22, 2018
+// Modified By:		Tom Tsiliopoulos 
+// Student ID:		100616336
+// Date Modified:	February 11, 2018
 
 Sound::Sound()
 {
