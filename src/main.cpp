@@ -64,7 +64,7 @@ TTK::Camera camera;
 // Sound Objects
 SoundEngine		soundEngine;
 FMOD_RESULT     result;
-FMOD::Sound     *soundFile;
+//FMOD::Sound     *soundFile;
 
 // Sound Channel
 FMOD::Channel   *channel = 0;
@@ -108,20 +108,25 @@ void OpenSoundFile()
 
 		puts(outPath);
 
-		
+		/*
 		if (soundFile) {
 			result = soundFile->release();
 			soundEngine.FmodErrorCheck(result);
 		}
+		*/
 
-		result = soundEngine.system->createSound(outPath, FMOD_3D, 0, &soundFile);
+		if (soundEngine.sound) {
+			soundEngine.sound->cleanUp();
+		}
+
+		result = soundEngine.system->createSound(outPath, FMOD_3D, 0, &soundEngine.sound->file);
 		soundEngine.FmodErrorCheck(result);
-		result = soundFile->set3DMinMaxDistance(0.0f, 6.0f);
+		result = soundEngine.sound->file->set3DMinMaxDistance(0.0f, 6.0f);
 		soundEngine.FmodErrorCheck(result);
-		result = soundFile->setMode(FMOD_LOOP_NORMAL);
+		result = soundEngine.sound->file->setMode(FMOD_LOOP_NORMAL);
 		soundEngine.FmodErrorCheck(result);
 
-		result = soundEngine.system->playSound(soundFile, 0, true, &channel);
+		result = soundEngine.system->playSound(soundEngine.sound->file, 0, true, &channel);
 		soundEngine.FmodErrorCheck(result);
 		result = channel->set3DAttributes(&soundPos, &soundVel);
 		soundEngine.FmodErrorCheck(result);
@@ -145,18 +150,18 @@ void SoundEngineInit() {
 	Load some sounds
 	*/
 
-	result = soundEngine.system->createSound("../media/drumloop.wav", FMOD_3D, 0, &soundFile);
+	result = soundEngine.system->createSound("../media/drumloop.wav", FMOD_3D, 0, &soundEngine.sound->file);
 	soundEngine.FmodErrorCheck(result);
-	result = soundFile->set3DMinMaxDistance(0.5f, 300.0f);
+	result = soundEngine.sound->file->set3DMinMaxDistance(0.5f, 300.0f);
 	soundEngine.FmodErrorCheck(result);
-	result = soundFile->setMode(FMOD_LOOP_NORMAL);
+	result = soundEngine.sound->file->setMode(FMOD_LOOP_NORMAL);
 	soundEngine.FmodErrorCheck(result);
 
 	/*
 	Play sounds at ertain positions
 	*/
 
-	result = soundEngine.system->playSound(soundFile, 0, true, &channel);
+	result = soundEngine.system->playSound(soundEngine.sound->file, 0, true, &channel);
 	soundEngine.FmodErrorCheck(result);
 	result = channel->set3DAttributes(&soundPos, &soundVel);
 	soundEngine.FmodErrorCheck(result);
@@ -461,8 +466,7 @@ void KeyboardCallbackFunction(unsigned char key, int x, int y)
 	switch (key)
 	{
 	case 27: // the escape key
-		result = soundFile->release();
-		soundEngine.FmodErrorCheck(result);
+		soundEngine.sound->cleanUp();
 		soundEngine.CleanUp();
 		glutExit();
 		break;

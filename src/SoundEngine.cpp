@@ -50,6 +50,9 @@ bool SoundEngine::Init()
 		if (result != FMOD_OK) {
 			init = false;
 		}
+
+		sound = new Sound();
+
 	}
 
 	return init;

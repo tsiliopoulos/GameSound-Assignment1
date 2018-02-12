@@ -45,7 +45,7 @@ public:
 	void            *extradriverdata = 0;
 	Listener		listener;
 
-	Sound *sound;
+	Sound			*sound;
 
 	void setListenerPosition(glm::vec3 newPos);
 
