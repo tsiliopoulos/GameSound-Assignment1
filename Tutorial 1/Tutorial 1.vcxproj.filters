@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="TTK">
+      <UniqueIdentifier>{e9aa8f81-2a08-45e2-ab34-cd96fab2c1e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{229f70e5-8fb3-4779-b062-3e00e9d8cb93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FMOD">
+      <UniqueIdentifier>{d67012d4-5aac-4009-888b-98352cc904ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FMOD\lib">
+      <UniqueIdentifier>{6b092a68-2641-411d-9ffb-1a1ce1d6de84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FMOD\inc">
+      <UniqueIdentifier>{bc954b74-d677-41db-82d2-61217abc1dcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FMOD\media">
+      <UniqueIdentifier>{8228755c-ed02-4157-b878-257ae85735a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NFD">
+      <UniqueIdentifier>{b915ebe1-c280-4dfe-a94f-9ba315009f5b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TTK\GraphicsUtils.cpp">
+      <Filter>TTK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TTK\MeshBase.cpp">
+      <Filter>TTK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TTK\QuadMesh.cpp">
+      <Filter>TTK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PointHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui_impl.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TTK\Texture2D.cpp">
+      <Filter>TTK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleEmitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUIFuncs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TTK\OBJMesh.cpp">
+      <Filter>TTK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SoundEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\nfd\src\nfd_common.c">
+      <Filter>NFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\nfd\src\nfd_win.cpp">
+      <Filter>NFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Sound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\TTK\Camera.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TTK\GraphicsUtils.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TTK\MeshBase.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TTK\QuadMesh.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AnimationMath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\stb_rect_pack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\stb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\stb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imgui_impl.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TTK\OBJMesh.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TTK\Texture2D.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KeyframeController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleEmitter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GUIFuncs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SoundEngine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FMOD\fmod.h">
+      <Filter>FMOD\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FMOD\fmod.hpp">
+      <Filter>FMOD\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FMOD\fmod_codec.h">
+      <Filter>FMOD\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FMOD\fmod_common.h">
+      <Filter>FMOD\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FMOD\fmod_dsp.h">
+      <Filter>FMOD\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FMOD\fmod_dsp_effects.h">
+      <Filter>FMOD\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FMOD\fmod_errors.h">
+      <Filter>FMOD\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FMOD\fmod_output.h">
+      <Filter>FMOD\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nfd\src\common.h">
+      <Filter>NFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nfd\src\nfd_common.h">
+      <Filter>NFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Sound.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\lib\fmod.dll">
+      <Filter>FMOD\lib</Filter>
+    </None>
+    <None Include="..\src\lib\fmod64.dll">
+      <Filter>FMOD\lib</Filter>
+    </None>
+    <None Include="..\src\lib\fmodL.dll">
+      <Filter>FMOD\lib</Filter>
+    </None>
+    <None Include="..\src\lib\fmodL64.dll">
+      <Filter>FMOD\lib</Filter>
+    </None>
+    <None Include="..\include\FMOD\fmod.cs">
+      <Filter>FMOD\inc</Filter>
+    </None>
+    <None Include="..\include\FMOD\fmod_dsp.cs">
+      <Filter>FMOD\inc</Filter>
+    </None>
+    <None Include="..\include\FMOD\fmod_errors.cs">
+      <Filter>FMOD\inc</Filter>
+    </None>
+    <None Include="..\media\c.ogg">
+      <Filter>FMOD\media</Filter>
+    </None>
+    <None Include="..\media\d.ogg">
+      <Filter>FMOD\media</Filter>
+    </None>
+    <None Include="..\media\e.ogg">
+      <Filter>FMOD\media</Filter>
+    </None>
+    <None Include="..\media\stereo.ogg">
+      <Filter>FMOD\media</Filter>
+    </None>
+    <None Include="..\media\wave_vorbis.fsb">
+      <Filter>FMOD\media</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\src\lib\fmod_vc.lib">
+      <Filter>FMOD\lib</Filter>
+    </Library>
+    <Library Include="..\src\lib\fmod64_vc.lib">
+      <Filter>FMOD\lib</Filter>
+    </Library>
+    <Library Include="..\src\lib\fmodL_vc.lib">
+      <Filter>FMOD\lib</Filter>
+    </Library>
+    <Library Include="..\src\lib\fmodL64_vc.lib">
+      <Filter>FMOD\lib</Filter>
+    </Library>
+    <Library Include="..\src\lib\libfmod.a">
+      <Filter>FMOD\lib</Filter>
+    </Library>
+    <Library Include="..\src\lib\libfmodL.a">
+      <Filter>FMOD\lib</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\media\drumloop.wav">
+      <Filter>FMOD\media</Filter>
+    </Media>
+    <Media Include="..\media\jaguar.wav">
+      <Filter>FMOD\media</Filter>
+    </Media>
+    <Media Include="..\media\singing.wav">
+      <Filter>FMOD\media</Filter>
+    </Media>
+    <Media Include="..\media\standrews.wav">
+      <Filter>FMOD\media</Filter>
+    </Media>
+    <Media Include="..\media\swish.wav">
+      <Filter>FMOD\media</Filter>
+    </Media>
+    <Media Include="..\media\wave.mp3">
+      <Filter>FMOD\media</Filter>
+    </Media>
+  </ItemGroup>
+</Project>
