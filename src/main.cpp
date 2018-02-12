@@ -64,7 +64,7 @@ TTK::Camera camera;
 // Sound Objects
 SoundEngine		soundEngine;
 FMOD_RESULT     result;
-//FMOD::Sound     *soundFile;
+FMOD::Sound     *soundFile;
 
 // Sound Channel
 FMOD::Channel   *channel = 0;
