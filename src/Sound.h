@@ -22,6 +22,7 @@ public:
 
 	FMOD::Channel   *channel;
 
+
 	void setChannelPosition(glm::vec3 newPos);
 	void cleanUp();
 

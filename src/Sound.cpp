@@ -2,12 +2,14 @@
 
 Sound::Sound()
 {
+
 }
 
 
 Sound::~Sound()
 {
 }
+
 
 void Sound::setChannelPosition(glm::vec3 newPos)
 {
