@@ -74,6 +74,7 @@ FMOD_VECTOR soundVel = { 0.0f, 0.0f, 0.0f };
 bool panEnabled = false;
 bool distanceEnabled = false;
 bool rollOff = false;
+std::string rollOffString = "Roll-Off Type: LOGARITHMIC";
 
 // Sliders
 float radius = 5.0f;
@@ -342,6 +343,8 @@ void Update(void)
 		soundEngine.FmodErrorCheck(soundEngine.result);
 	}
 	else {
+		soundEngine.result = soundEngine.sound->channel->set3DMinMaxDistance(1.0f, 20.0f);
+		soundEngine.FmodErrorCheck(soundEngine.result);
 		soundEngine.result = soundEngine.sound->channel->setMode(FMOD_3D_INVERSEROLLOFF);
 		soundEngine.FmodErrorCheck(soundEngine.result);	
 	}
@@ -388,7 +391,10 @@ void Update(void)
 
 	if (ImGui::Button("Roll-Off")) {
 		rollOff = !rollOff;
+		rollOffString = (rollOff) ? "Roll-Off Type: LINEAR" : "Roll-Off Type: LOGARITHMIC";
 	}
+
+	ImGui::Text(&rollOffString[0]);
 
 	ImGui::Text("Hierarchy");
 	ImGui::Separator();
